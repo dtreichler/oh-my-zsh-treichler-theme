@@ -3,6 +3,7 @@ oh-my-zsh-treichler-theme
 
 Screenshot
 ----------
+
 ![Screenshot](http://github.com/dtreichler/oh-my-zsh-treichler-theme/raw/master/screenshot.png)
 
 Installation
@@ -21,6 +22,7 @@ Features
 * Supports `virtualenv` without shifting prompt
 * Git repo status
 * No unicode characters for those without uncode support in their terminal
+* Trimmed pwd for long paths
 
 Requirements
 ------------
