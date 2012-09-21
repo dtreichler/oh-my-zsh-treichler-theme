@@ -4,6 +4,8 @@ function treichler_precmd {
 
     if [ $VIRTUAL_ENV ]; then
         PR_ENV="(`basename $VIRTUAL_ENV`)"
+    else
+        PR_ENV=""
     fi
 
     ZSH_THEME_GIT_PROMPT_PREFIX=" "
