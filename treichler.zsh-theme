@@ -71,13 +71,17 @@ setprompt () {
     PR_ULCORNER=${altchar[l]:--}
     PR_LLCORNER=${altchar[m]:--}
 
+    export PR_USERCOLOR=$PR_GREEN
+    export PR_HOSTCOLOR=$PR_MAGENTA
+    export PR_PATHCOLOR=$PR_CYAN
+    export PR_ENVCOLOR=$PR_YELLOW
 
     PR_GIT=`git_prompt_info``git_prompt_status`
 
     PROMPT='$PR_WHITE$PR_SHIFT_IN$PR_ULCORNER$PR_HBAR$PR_SHIFT_OUT\
-$PR_CYAN %$PR_PWDLEN<...<%~%<<`git_prompt_info``git_prompt_status`\
-${(e)PR_FILLBAR}$PR_YELLOW$PR_ENV\
-$PR_GREY($PR_GREEN%(!.%SROOT%s.%n)$PR_GREY@$PR_MAGENTA%m\
+$PR_PATHCOLOR %$PR_PWDLEN<...<%~%<<`git_prompt_info``git_prompt_status`\
+${(e)PR_FILLBAR}$PR_ENVCOLOR$PR_ENV\
+$PR_GREY($PR_USERCOLOR%(!.%SROOT%s.%n)$PR_GREY@$PR_HOSTCOLOR%m\
 $PR_GREY)\
 
 $PR_WHITE$PR_SHIFT_IN$PR_LLCORNER$PR_HBAR$PR_SHIFT_OUT>$PR_NO_COLOUR '

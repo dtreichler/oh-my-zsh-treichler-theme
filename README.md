@@ -22,7 +22,22 @@ Features
 * Supports `virtualenv` without shifting prompt
 * Git repo status
 * No unicode characters for those without uncode support in their terminal
-* Trimmed pwd for long paths
+* Trimmed cwd for long paths
+
+Configuration
+-------------
+It is possible to modify the colors in the prompt by setting variables in your `.zshrc` file.
+
+* `$PR_PATHCOLOR` --> cwd
+* `$PR_USERCOLOR` --> user
+* `$PR_HOSTCOLOR` --> hostname
+* `$PR_ENVCOLOR` --> virtualenv
+
+Variables are easily set with the `fg` variable, like so
+
+    export PR_HOSTCOLOR=$fg[green]
+
+Note that case matters for the colors. Possible values are red, green, yellow, blue, magenta, cyan, white and grey.
 
 Requirements
 ------------
