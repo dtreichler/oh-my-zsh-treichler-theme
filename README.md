@@ -10,9 +10,9 @@ Installation
 ------------
 
 1. Clone this repository
-2. Create a symlink
-    cd oh-my-zsh-treichler-theme
-    ln -s treichler.zsh-theme ~/.oh-my-zsh/themes
+2. Create a symlink    
+    `cd oh-my-zsh-treichler-theme`    
+    `ln -s treichler.zsh-theme ~/.oh-my-zsh/themes`    
 3. Configure your `.zshrc`
     ZSH_THEME="treichler"
 
