@@ -36,11 +36,11 @@ function treichler_precmd {
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 
     ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}+"
-    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%}*"
+    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$terminfo[bold]$fg[blue]%}*"
     ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}x"
     ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} mv"
     ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} m"
-    ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%} ut"
+    ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$terminfo[bold]$fg[white]%} ut"
 
 }
 
