@@ -1,3 +1,4 @@
+# vim: set filetype=sh
 function treichler_precmd {
     local TERMWIDTH
     (( TERMWIDTH = ${COLUMNS} - 1 ))
@@ -24,7 +25,7 @@ function treichler_precmd {
 
     PR_PWDLEN=""
 
-    local promptsize=${#${(%):---$PR_GIT$PR_ENV(%n@%m)}}
+    local promptsize=${#${(%):---$PR_GIT $PR_ENV(%n@%m)}}
     local pwdsize=${#${(%):-%~}}
     if [[ "$promptsize + $pwdsize" -gt $TERMWIDTH ]]; then
         ((PR_PWDLEN=$TERMWIDTH - $promptsize))
@@ -86,9 +87,9 @@ $PR_GREY)\
 
 $PR_WHITE$PR_SHIFT_IN$PR_LLCORNER$PR_HBAR$PR_SHIFT_OUT>$PR_NO_COLOUR '
 
-    return_code="%(?..$PR_RED%? %{$reset_color%})"
+    return_code="%(?..$PR_RED%?%{$reset_color%})"
 
-    RPROMPT=' $return_code'
+    RPROMPT=' $return_code$PR_GREY($PR_WHITE%*$PR_GREY)$PR_NO_COLOUR'
 
     PS2='%_'
 
