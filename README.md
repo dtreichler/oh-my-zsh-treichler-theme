@@ -4,7 +4,7 @@ oh-my-zsh-treichler-theme
 Screenshot
 ----------
 
-![Screenshot](http://github.com/dtreichler/oh-my-zsh-treichler-theme/raw/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/dtreichler/oh-my-zsh-treichler-theme/master/screenshot.png)
 
 Installation
 ------------
@@ -38,6 +38,8 @@ Variables are easily set with the `fg` variable, like so
     export PR_HOSTCOLOR=$fg[green]
 
 Note that case matters for the colors. Possible values are red, green, yellow, blue, magenta, cyan, white and grey.
+
+If using PuTTy, make sure Settings -> Window -> Translation -> Remote Character Set is ISO-8859.
 
 Requirements
 ------------
